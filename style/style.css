@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --border-clr: #222533;
+  --secondary-text-clr: #b0b3c1;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+}
