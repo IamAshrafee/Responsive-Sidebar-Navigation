@@ -56,6 +56,32 @@ main .container:hover {
   top: 0;
   left: 0;
   align-items: self;
+  transition: 300ms ease-in-out;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+#sidebar.close {
+  padding: 5px 5px;
+  width: 60px;
+}
+
+#toggle-btn {
+  border-radius: 0.5rem;
+  padding: 8px;
+  cursor: pointer;
+  rotate: -180deg;
+  > svg {
+    transition: 200ms ease-in-out;
+  }
+}
+
+.toggle-rotate svg {
+  rotate: 180deg;
+}
+
+#toggle-btn:hover {
+  background-color: var(--border-clr);
 }
 
 #sidebar ul {
@@ -67,6 +93,7 @@ main .container:hover {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 30px;
+  margin-right: 6px;
   .logo {
     font-weight: 600;
   }
@@ -87,8 +114,12 @@ main .container:hover {
   align-items: center;
   text-decoration: none;
   color: var(--text-clr);
-  gap: 0.85em;
+  gap: 1em;
   padding: 13px;
+}
+
+#sidebar ul li span:nth-child(2) {
+  margin-left: 10px;
 }
 
 .dropdown-btn {
@@ -120,6 +151,39 @@ main .container:hover {
   padding-left: 30px;
 }
 
-#sidebar .sub-menu{
-  display: none;
+#sidebar > ul > li {
+  .logo {
+    margin-right: auto;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+#sidebar .dropdown-btn > svg:last-child {
+  height: 15px;
+  width: 15px;
+  transition: 200ms ease-in-out;
+}
+
+#sidebar .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+  > div {
+    overflow: hidden;
+  }
+}
+
+#sidebar .sub-menu.show {
+  grid-template-rows: 1fr;
+}
+.rotate svg:last-child {
+  rotate: 90deg;
 }
